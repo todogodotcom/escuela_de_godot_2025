@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://do3oihj1cmbav"]
+
+[ext_resource type="Script" uid="uid://4jwu2u6nhfhq" path="res://scenes/crafting_board.gd" id="1_e0g1f"]
+
+[node name="CraftingBoard" type="GridContainer"]
+custom_minimum_size = Vector2(256, 224)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 3
+script = ExtResource("1_e0g1f")
