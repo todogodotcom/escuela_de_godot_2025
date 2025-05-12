@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://bhucghybjefpm"]
+
+[ext_resource type="Script" uid="uid://dgvwdseav5sy" path="res://scripts/item_data.gd" id="1_c4v4c"]
+[ext_resource type="Resource" uid="uid://oi4u4nhd6k6x" path="res://resources/items/sword_small.tres" id="1_ppm1h"]
+[ext_resource type="Resource" uid="uid://0utux76ehyiw" path="res://resources/items/apple.tres" id="2_j3g6i"]
+[ext_resource type="Script" uid="uid://cxivhxkmb4knk" path="res://scripts/recipe.gd" id="3_pl6sh"]
+
+[resource]
+script = ExtResource("3_pl6sh")
+items_input = Array[ExtResource("1_c4v4c")]([ExtResource("2_j3g6i"), ExtResource("2_j3g6i")])
+item_output = ExtResource("1_ppm1h")

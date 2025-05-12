@@ -1,0 +1,107 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwy4gt5plhthy"]
+
+[ext_resource type="Script" uid="uid://8n6icjgvygsu" path="res://scenes/main.gd" id="1_dtkyl"]
+[ext_resource type="PackedScene" uid="uid://barj1ae3ldxff" path="res://scenes/game.tscn" id="2_024a2"]
+[ext_resource type="PackedScene" uid="uid://do3oihj1cmbav" path="res://scenes/crafting_board.tscn" id="2_r2fh6"]
+[ext_resource type="PackedScene" uid="uid://bnn7xdvw70tre" path="res://scenes/inventory.tscn" id="3_ujxlk"]
+
+[node name="Main" type="MarginContainer" node_paths=PackedStringArray("crafting_board", "inventory", "save_button", "settings_button")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+script = ExtResource("1_dtkyl")
+crafting_board = NodePath("VBoxContainer/HBoxContainer/CraftingBoardBackground/CenterContainer/CraftingBoard")
+inventory = NodePath("VBoxContainer/InventoryBackground/ScrollContainer/CenterContainer/Inventory")
+save_button = NodePath("VBoxContainer/HBoxContainer/ButtonsPanel/VBoxContainer/SaveButton")
+settings_button = NodePath("VBoxContainer/HBoxContainer/ButtonsPanel/VBoxContainer/SettingsButton")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(512, 160)
+render_target_update_mode = 4
+
+[node name="Game" parent="VBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("2_024a2")]
+scale = Vector2(2, 2)
+
+[node name="InventoryBackground" type="ColorRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 368)
+layout_mode = 2
+color = Color(0.41463, 0.30742, 0.283918, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/InventoryBackground"]
+layout_mode = 2
+offset_right = 512.0
+offset_bottom = 368.0
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/InventoryBackground/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Inventory" parent="VBoxContainer/InventoryBackground/ScrollContainer/CenterContainer" instance=ExtResource("3_ujxlk")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CraftingBoardBackground" type="ColorRect" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 352)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.233925, 0.233925, 0.233925, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/CraftingBoardBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="CraftingBoard" parent="VBoxContainer/HBoxContainer/CraftingBoardBackground/CenterContainer" instance=ExtResource("2_r2fh6")]
+layout_mode = 2
+
+[node name="ButtonsPanel" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/ButtonsPanel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="SaveButton" type="Button" parent="VBoxContainer/HBoxContainer/ButtonsPanel/VBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "💾"
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer/HBoxContainer/ButtonsPanel/VBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "⚙️"
+
+[connection signal="item_selected" from="VBoxContainer/InventoryBackground/ScrollContainer/CenterContainer/Inventory" to="." method="_on_inventory_item_selected"]
+[connection signal="recipe_crafted" from="VBoxContainer/HBoxContainer/CraftingBoardBackground/CenterContainer/CraftingBoard" to="." method="_on_crafting_board_recipe_crafted"]
+
+[editable path="VBoxContainer/SubViewportContainer/SubViewport/Game"]

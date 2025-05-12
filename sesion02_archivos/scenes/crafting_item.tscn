@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqlxm2wx2e35c"]
+
+[ext_resource type="Script" uid="uid://d0yoe10kaf6w7" path="res://scenes/crafting_item.gd" id="1_myk5c"]
+
+[node name="CraftingItem" type="Button"]
+custom_minimum_size = Vector2(80, 80)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("1_myk5c")

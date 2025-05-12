@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://4u6y23ljkvls"]
+
+[ext_resource type="Script" uid="uid://dgvwdseav5sy" path="res://scripts/item_data.gd" id="1_d2wif"]
+[ext_resource type="Texture2D" uid="uid://b51gapjnxbs72" path="res://assets/sprites/16.png" id="2_i3748"]
+
+[resource]
+script = ExtResource("1_d2wif")
+texture = ExtResource("2_i3748")
+name = "Banana"
+type = 0
+health = 3
+damage = 0
+armor = 0
+accuracy = 0
+critical_rate = 0
+tradeable = true

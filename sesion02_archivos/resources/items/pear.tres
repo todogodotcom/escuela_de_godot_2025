@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b0wt65kyf0d8n"]
+
+[ext_resource type="Script" uid="uid://dgvwdseav5sy" path="res://scripts/item_data.gd" id="1_3jxsh"]
+[ext_resource type="Texture2D" uid="uid://bxrfryw205l60" path="res://assets/sprites/14.png" id="2_ksfqb"]
+
+[resource]
+script = ExtResource("1_3jxsh")
+texture = ExtResource("2_ksfqb")
+name = "Pear"
+type = 0
+health = 2
+damage = 0
+armor = 0
+accuracy = 0
+critical_rate = 0
+tradeable = true

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b4mc7755r314g"]
+
+[ext_resource type="Script" uid="uid://dgvwdseav5sy" path="res://scripts/item_data.gd" id="1_iwicc"]
+[ext_resource type="Texture2D" uid="uid://c21ejt0qq26rb" path="res://assets/sprites/21.png" id="2_fll23"]
+
+[resource]
+script = ExtResource("1_iwicc")
+texture = ExtResource("2_fll23")
+name = "Red Potion Small"
+type = 0
+health = 4
+damage = 0
+armor = 0
+accuracy = 0
+critical_rate = 0
+tradeable = true
