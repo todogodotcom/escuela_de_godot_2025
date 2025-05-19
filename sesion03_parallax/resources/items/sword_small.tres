@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://oi4u4nhd6k6x"]
+
+[ext_resource type="Script" uid="uid://dgvwdseav5sy" path="res://scripts/item_data.gd" id="1_wjff4"]
+[ext_resource type="Texture2D" uid="uid://8wggetv6wrhl" path="res://assets/sprites/01.png" id="2_tvoqn"]
+
+[resource]
+script = ExtResource("1_wjff4")
+texture = ExtResource("2_tvoqn")
+name = "Sword Small"
+type = 4
+health = 0
+damage = 20
+armor = 3
+accuracy = 5
+critical_rate = 3
+tradeable = true

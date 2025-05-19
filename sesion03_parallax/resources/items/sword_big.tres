@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dm5hiw1bb0ldv"]
+
+[ext_resource type="Script" uid="uid://dgvwdseav5sy" path="res://scripts/item_data.gd" id="1_8hbp7"]
+[ext_resource type="Texture2D" uid="uid://bwpp1j1rqxkam" path="res://assets/sprites/02.png" id="2_6t5br"]
+
+[resource]
+script = ExtResource("1_8hbp7")
+texture = ExtResource("2_6t5br")
+name = "Sword Big"
+type = 4
+health = 0
+damage = 10
+armor = 2
+accuracy = 3
+critical_rate = 1
+tradeable = true

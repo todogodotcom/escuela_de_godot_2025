@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Recipes" load_steps=5 format=3 uid="uid://nuw8goxcpax5"]
+
+[ext_resource type="Script" uid="uid://cxivhxkmb4knk" path="res://scripts/recipe.gd" id="1_tet4q"]
+[ext_resource type="Script" uid="uid://dphfyxqybc2e4" path="res://scripts/recipes.gd" id="2_74p2e"]
+[ext_resource type="Resource" uid="uid://bhucghybjefpm" path="res://resources/recipes/recipe_red_potion_small.tres" id="2_n1y8d"]
+[ext_resource type="Resource" uid="uid://nqkwg23e0xlr" path="res://resources/recipes/recipe_red_potion_big.tres" id="3_5can6"]
+
+[resource]
+script = ExtResource("2_74p2e")
+recipes = Array[ExtResource("1_tet4q")]([ExtResource("2_n1y8d"), ExtResource("3_5can6")])

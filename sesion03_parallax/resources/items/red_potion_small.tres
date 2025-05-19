@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://by4uyabedowol"]
+
+[ext_resource type="Script" uid="uid://dgvwdseav5sy" path="res://scripts/item_data.gd" id="1_3eayf"]
+[ext_resource type="Texture2D" uid="uid://xh0behcegrat" path="res://assets/sprites/22.png" id="2_nb0t8"]
+
+[resource]
+script = ExtResource("1_3eayf")
+texture = ExtResource("2_nb0t8")
+name = "Red Potion Big"
+type = 0
+health = 8
+damage = 0
+armor = 0
+accuracy = 0
+critical_rate = 0
+tradeable = true

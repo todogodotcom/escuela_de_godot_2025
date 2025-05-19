@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://wmivktoeimh8"]
+
+[ext_resource type="Script" uid="uid://dgvwdseav5sy" path="res://scripts/item_data.gd" id="1_rf4jo"]
+[ext_resource type="Texture2D" uid="uid://bsmg76kumxgyi" path="res://assets/sprites/15.png" id="2_aj4ds"]
+
+[resource]
+script = ExtResource("1_rf4jo")
+texture = ExtResource("2_aj4ds")
+name = "Peach"
+type = 0
+health = 2
+damage = 0
+armor = 0
+accuracy = 0
+critical_rate = 0
+tradeable = true

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://nqkwg23e0xlr"]
+
+[ext_resource type="Script" uid="uid://dgvwdseav5sy" path="res://scripts/item_data.gd" id="1_nesn8"]
+[ext_resource type="Resource" uid="uid://0utux76ehyiw" path="res://resources/items/apple.tres" id="2_6e1te"]
+[ext_resource type="Resource" uid="uid://nx3o7d40t7bj" path="res://resources/items/cherry.tres" id="3_0pgni"]
+[ext_resource type="Resource" uid="uid://dm5hiw1bb0ldv" path="res://resources/items/sword_big.tres" id="4_focuq"]
+[ext_resource type="Script" uid="uid://cxivhxkmb4knk" path="res://scripts/recipe.gd" id="4_mrpjk"]
+
+[resource]
+script = ExtResource("4_mrpjk")
+items_input = Array[ExtResource("1_nesn8")]([ExtResource("2_6e1te"), ExtResource("3_0pgni")])
+item_output = ExtResource("4_focuq")
