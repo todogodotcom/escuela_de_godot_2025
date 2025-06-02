@@ -30,6 +30,7 @@ Aprendemos a trabajar con archivos de texto, pero también a procesar JSON, a ci
 - Material en preparación
 
 ### Sesión 4 (26/05/2025)
+- Material en preparación
 
 ### Sesión 5 (02/06/2025)
 
